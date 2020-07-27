@@ -21,4 +21,22 @@ jobs:
       - uses: actions/checkout@v2
       - uses: ./
         with:
-          milliseconds: 1000
+          copy:
+            form:
+              path: /articles
+              branch: source
+            to:
+              path: /posts
+              branch: infrastructure
+          copy:
+            form:
+              path: /assets
+              branch: source
+            to:
+              path: /assets
+              branch: infrastructure
+          build:
+            branch: infrastructure
+          deploy:
+            branch: master
+          

@@ -1,11 +1,25 @@
-name: 'Your name here'
-description: 'Provide a description here'
-author: 'Your name or organization here'
+name: "Github Hexo"
+description: ""
+author: "Your name or organization here"
 inputs:
-  milliseconds: # change this
-    required: true
-    description: 'input description here'
-    default: 'default value if applicable'
+  copy-form-branch:
+    required: false
+    description: "input description here"
+    default: "default value if applicable"
+
+  copy-to-branch:
+    required: false
+    description: "input description here"
+    default: "default value if applicable"
+    
+  build-branch:
+    required: false
+    description: "input description here"
+
+  deploy-branch:
+    required: false
+    description: "input description here"
+
 runs:
-  using: 'node12'
-  main: 'dist/index.js'
+  using: "node12"
+  main: "dist/index.js"
